@@ -1,0 +1,12 @@
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#main div {
+  padding: 20px;
+  border: 1px solid black;
+  height: fit-content;
+  width: fit-content;
+}
