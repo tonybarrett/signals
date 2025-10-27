@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SignalsService } from '../../services/signals.service';
 
 @Component({
   selector: 'app-first-component',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './first-component.scss',
 })
 export class FirstComponent {
+  private readonly signalsService = inject(SignalsService);
 
+  public increment(): void {
+    this.signalsService.incrementCount();
+  }
+
+  public getCount(): number {
+    return this.signalsService.getCount();
+  }
 }

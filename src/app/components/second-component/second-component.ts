@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SignalsService } from '../../services/signals.service';
 
 @Component({
   selector: 'app-second-component',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './second-component.scss',
 })
 export class SecondComponent {
+  private readonly signalsService = inject(SignalsService);
 
+  public getCount(): number {
+    return this.signalsService.getCount();
+  }
+
+  public decrement(): void {
+    return this.signalsService.decrementCount();
+  }
 }
