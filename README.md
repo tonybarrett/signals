@@ -1,3 +1,5 @@
+Simple app to teach me the principles of reactive signals.
+
 # Signals
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.0.
