@@ -10,11 +10,11 @@ import { SignalsService } from '../../services/signals.service';
 export class FirstComponent {
   private readonly signalsService = inject(SignalsService);
 
-  public increment(): void {
+  public onIncrement(): void {
     this.signalsService.incrementCount();
   }
 
   public getCount(): number {
-    return this.signalsService.getCount();
+    return this.signalsService.getCounter();
   }
 }

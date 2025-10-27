@@ -11,10 +11,10 @@ export class SecondComponent {
   private readonly signalsService = inject(SignalsService);
 
   public getCount(): number {
-    return this.signalsService.getCount();
+    return this.signalsService.getCounter();
   }
 
-  public decrement(): void {
+  public onDecrement(): void {
     return this.signalsService.decrementCount();
   }
 }

@@ -10,7 +10,7 @@ export class SignalsService {
     this.count.set(number);
   }
 
-  public getCount(): number {
+  public getCounter(): number {
     return this.count();
   }
 
